@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="container">
+    <div class="inner">
+        <a href="../index.html"><-- Back</a>
+
+        <h1 class="title">Lecture 2</h1>
+
+        <h2 class="title">Task 1</h2>
+        <p class="subtitle">Simple Calculator</p>
+        <p class="subtitle">Write a function add that will work like that: </p>
+        <div class="subtitle">
+            <p class="">add(1,2) //3</p>
+            <p class="">add(1)(2) //3</p>
+        </div>
+        <div id="result-1" class="inner">
+            <!--  result  -->
+        </div>
+
+        <h2 class="title">Task 2</h2>
+        <p class="subtitle">
+            Write your own implementation of the built-in array function filter.
+            Call the function myFilter and make it so that any array can use this function as a “native” one.
+            It must take a callback function as parameters and an optional parameter as an object that will
+            be used as .this in internal calls to this callback function.
+            Ultimately, your myFilter implementation should work exactly like the built-in filter method.
+            The callback function passed as a parameter must also be called with the same
+            parameters as the original (element, index, array)
+            Input number and press Convert to get binary
+        </p>
+
+
+        <pre>
+            Array.prototype.myFilter = function (callback, thisArg) {
+                if (typeof (callback) !== 'function')
+                    throw new Error(callback + " is not a function!")
+
+                const array = this
+                let result = []
+
+                for (let index = 0; index < array.length; index++) {
+                    const element = array[index]
+                    if (callback.call(thisArg, element, index, array))
+                        result = [...result, array[index]]
+                }
+
+                return result
+            }
+        </pre>
+
+
+        <h2>Task 3</h2>
+        <p class="subtitle">It is necessary to reflash the global object a little. Consider these three functions:</p>
+
+        <div class="subtitle">
+            <p>window.alert(); // confirm()</p>
+            <p>window.prompt(); // alert()</p>
+            <p>window.confirm(); // prompt()</p>
+        </div>
+
+        <p class="subtitle">When calling alert(), the logic confirm(), prompt - alert(), confirm() - prompt() should
+            work, feel free to use your own order.</p>
+
+        <p class="subtitle">*Additionally - try to do this as briefly as possible, in the least amount of steps.
+            (By action we mean any operation - creating a variable, equating, calling a method)</p>
+
+        <button id="btn-1" class="button">standard behavior</button>
+        <button id="btn-2" class="button">new behavior</button>
+    </div>
+</div>
+
+<script src="lecture-2.js"></script>
+</body>
+</html>

@@ -15,8 +15,16 @@ p {
 }
 
 button {
+  font-family: inherit;
   cursor: pointer;
   user-select: none;
+}
+
+pre {
+  width: 100%;
+  border: 1px dashed grey;
+  padding: 20px;
+  min-height: 37px;
 }
 
 .container {
@@ -35,6 +43,7 @@ button {
   border: 1px solid grey;
   padding: 10px 20px;
   min-height: 37px;
+
 }
 
 .title {
