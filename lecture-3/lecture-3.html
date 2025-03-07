@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="container">
+    <div class="inner">
+        <a href="../index.html"><-- Back</a>
+
+        <h1 class="title">Lecture 3</h1>
+
+        <h2 class="title">Task 1</h2>
+        <p class="subtitle">Create a regular object and make it iterable. In this case, the iteration should proceed as follows:
+            All values from the object's from property to the to property must be traversed one by one.
+            (if to < from - an error should occur).
+            If to or from is not specified OR to or from are not numbers, an error should occur.
+        </p>
+
+        <p class="subtitle">Examples:</p>
+        <pre>
+            const myIterable = { from: 1, to: 4 };
+            for (let item of myIterable) {
+                console.log(item);  //1, 2, 3, 4
+            }
+
+            const myIterable = { from: 'aaa', to: 4 };
+            for (let item of myIterable) {  //Error!
+                console.log(item);
+            }
+
+        </pre>
+        <div id="result-1" class="inner">
+            <!--  result  -->
+        </div>
+
+        <h2 class="title">Task 2</h2>
+        <p class="subtitle">
+            You need to implement a function that will take a person's name and age as arguments
+            and then return an array of objects.
+            Each object must be created in a unique way.
+            Additionally - it is not necessary to write these properties as your own for the object,
+            you can play with prototypes
+        </p>
+
+        <div id="result-2" class="inner">
+            <!--  result  -->
+        </div>
+
+    </div>
+</div>
+
+<script src="lecture-3.js"></script>
+</body>
+</html>
