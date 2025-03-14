@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="container">
+    <div class="inner">
+        <a href="../index.html"><-- Back</a>
+
+        <h1 class="title">Lecture 3</h1>
+
+        <h2 class="title">Task 1</h2>
+        <p class="subtitle">
+            Create a Calculator class.
+            The constructor accepts two numbers, if at least one is not valid, it throws an error.
+            We do not consider Infinity and other special values of the number type to be valid numbers.
+            Methods:
+            setX() - sets the first number
+            setY() - sets the second number
+            logSum() - returns the sum of the given numbers
+            logMul() - returns the product of the given numbers
+            logSub() - returns the difference of the given numbers
+            logDiv() - returns the quotient of the given numbers, throws an error when dividing by 0.
+            All methods of the second group should work correctly even if they are placed in a separate variable
+        </p>
+
+        <pre>const logSumRef = calculator.logSum;
+            console.log(logSumRef()); // still works</pre>
+
+        <div id="result-1" class="inner">
+            <!--  result  -->
+        </div>
+    </div>
+</div>
+
+<script src="lecture-4.js"></script>
+</body>
+</html>
